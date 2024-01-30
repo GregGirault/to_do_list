@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Nouvelle Tache
+{% endblock %}
+
+{% block body %}
+<div class="container animate__animated animate__fadeIn">
+    <h1 class="my-4">Créer Nouvelle Tache</h1>
+
+    <div class="card card-body bg-light my-4 px-5 py-4 animate__animated animate__fadeIn">
+        {{ include('taches/_form.html.twig', {
+            'button_label': 'Créer',
+            'button_class': 'btn btn-success animate__animated animate__bounceIn'
+        }) }}
+    </div>
+
+    <a class="btn btn-secondary mt-3 animate__animated animate__fadeInLeft" href="{{ path('app_taches_index') }}">
+    <i class="fas fa-arrow-left mr-2"></i>
+        Retour à la liste
+    </a>
+</div>
+{% endblock %}
+
